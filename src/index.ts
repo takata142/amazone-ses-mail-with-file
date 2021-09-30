@@ -6,22 +6,24 @@ const main = async () => {
   dotenv.config()
 
   const transporter = nodemailer.createTransport({
-    SES: new AWS.SES({ apiVersion: '2010-12-01', region: 'ap-northeast-1' }),
+    SES: new AWS.SES({ apiVersion: '2010-12-01', region: 'us-west-2' }),
   })
 
+  //test-td@t-denso-dev.awsapps.com
+  //userName: test-td
+  //passWord: Tdenso1220
   const result = await transporter.sendMail({
-    from: 'yoshikawa.daio@classmethod.jp',
-    to: 'yoshikawa.daio@classmethod.jp',
-    subject: 'タイトル',
-    text: '本文',
+    from: 'test-td@t-denso-dev.awsapps.com',
+    to: 'takata.ikuo@t-denso.com',
+    subject: 'test',
+    text: 'テストメール',
     attachments: [
       {
-        filename: 'sample.png',
-        path: './sample.png',
+        filename: 'text.txt',
+        path: './text.txt',
       },
     ],
   })
-
   console.log(result.messageId)
 }
 
