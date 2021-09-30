@@ -9,12 +9,9 @@ const main = async () => {
     SES: new AWS.SES({ apiVersion: '2010-12-01', region: 'us-west-2' }),
   })
 
-  //test-td@t-denso-dev.awsapps.com
-  //userName: test-td
-  //passWord: Tdenso1220
   const result = await transporter.sendMail({
-    from: 'test-td@t-denso-dev.awsapps.com',
-    to: 'takata.ikuo@t-denso.com',
+    from: '送信元メールアドレス',
+    to: '送信先メールアドレス',
     subject: 'test',
     text: 'テストメール',
     attachments: [
