@@ -2,6 +2,8 @@
 
 Amazon SES でメールにファイルを添付して送信するサンプルです。
 
+使用ライブラリ：nodemailer
+
 ## Usage
 
 ### 1. install
