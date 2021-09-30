@@ -6,7 +6,7 @@ Amazon SES でメールにファイルを添付して送信するサンプルで
 
 ### 1. install
 
-npm install
+npm install  
 npm install nodemailer
 
 ### 2. 送信元メールアドレスを入力
