@@ -1,28 +1,20 @@
-# aws-ses-node-with-file-sample
+# amazon-ses-mail-with-file
 
 Amazon SES でメールにファイルを添付して送信するサンプルです。
 
 ## Usage
 
-### 1. IAM ユーザの作成
+### 1. install
 
-AmazonSESFullAccess Policy をアタッチした IAM ユーザを作成する。
+npm install
+npm install nodemailer
 
-### 2. .envファイルの作成
+### 2. 送信元メールアドレスを入力
 
-下記コマンドで .env ファイルを作成する。
+SESに登録され、verify済みのアドレスを指定
 
-```bash
-cp .env.example .env
-```
+### 3. 送信先メールアドレスを指定
 
-.env の `AWS_ACCESS_KEY_ID=` `AWS_SECRET_ACCESS_KEY=` にそれぞれ上で作成した IAM ユーザの値をセットする。
+SESに登録され、verify済みのアドレスを指定
 
-### 3. 実行
 
-```bash
-yarn install
-yarn start
-```
-
-## Blog
